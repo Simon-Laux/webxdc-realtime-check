@@ -1,7 +1,7 @@
 {
   "private": true,
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "dev-mini": "vite --port 3000",
     "dev": "concurrently \"npm run dev-mini\" \"webxdc-dev run http://localhost:3000\"",
