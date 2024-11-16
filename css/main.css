@@ -15,8 +15,18 @@ table.pingtable td {
   border: 1px solid lightgrey;
 }
 
+#app, html, body {
+  height: 100%;
+  margin:0;
+}
+
 .main-view {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 6px;
+}
+
+h2 {
+  margin-block: 4px;
 }
