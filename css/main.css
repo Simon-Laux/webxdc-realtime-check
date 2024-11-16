@@ -1,0 +1,22 @@
+table.pingtable {
+  border: 1px solid lightgrey;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table.pingtable thead {
+  font-weight: bold;
+}
+
+table.pingtable tr {
+}
+
+table.pingtable td {
+  border: 1px solid lightgrey;
+}
+
+.main-view {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
