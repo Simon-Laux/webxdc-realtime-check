@@ -109,7 +109,9 @@ const mockData = [
 
 export default function PingGraph({ hideLabel }: { hideLabel?: boolean }) {
   const cyRef = useRef<cytoscape.Core | null>(null);
-  const {knownPeers, lastSentPing:_} = usePeersStore(({ knownPeers, lastSentPing }) => ({knownPeers, lastSentPing}));
+  const { knownPeers, lastSentPing: _ } = usePeersStore(
+    ({ knownPeers, lastSentPing }) => ({ knownPeers, lastSentPing }),
+  );
 
   useLayoutEffect(() => {
     cyRef.current?.layout({ name: "circle" }).run();
@@ -123,7 +125,7 @@ export default function PingGraph({ hideLabel }: { hideLabel?: boolean }) {
         ping: peer.lastPing?.ping,
         receivedTime: peer.lastPing?.receivedTime || 0,
       };
-    }
+    },
   );
 
   const offlineCutoff = Date.now() - UI_OFFLINE_TIMEOUT;
@@ -192,7 +194,9 @@ export default function PingGraph({ hideLabel }: { hideLabel?: boolean }) {
     });
   });
 
-  const elements: cytoscape.ElementDefinition[] = window.webxdc ? data : mockData;
+  const elements: cytoscape.ElementDefinition[] = window.webxdc
+    ? data
+    : mockData;
 
   return (
     <div

@@ -15,9 +15,11 @@ table.pingtable td {
   border: 1px solid lightgrey;
 }
 
-#app, html, body {
+#app,
+html,
+body {
   height: 100%;
-  margin:0;
+  margin: 0;
 }
 
 .main-view {

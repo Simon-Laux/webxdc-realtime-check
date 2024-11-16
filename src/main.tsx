@@ -31,7 +31,7 @@ export function App() {
         <button onClick={() => setHideGraphLabel(!hideGraphLabel)}>
           {`${hideGraphLabel ? "Show" : "Hide"} Graph Node Label`}
         </button>
-        <div style={{float:'right'}}>{lastSentPing?.ts}</div>
+        <div style={{ float: "right" }}>{lastSentPing?.ts}</div>
       </div>
     </div>
   );

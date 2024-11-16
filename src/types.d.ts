@@ -86,7 +86,7 @@ type EpermeralPacket =
   | DisplaynameResponsePacket;
 type StatusPacket = Packet;
 
-type AllPackets = EpermeralPacket // | StatusPacket;
+type AllPackets = EpermeralPacket; // | StatusPacket;
 
 //#endregion
 

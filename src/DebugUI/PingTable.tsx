@@ -8,7 +8,7 @@ import { DateTime } from "luxon";
 
 export function PingTable() {
   const { knownPeers, lastSentPing: _ } = usePeersStore(
-    ({ knownPeers, lastSentPing }) => ({ knownPeers, lastSentPing })
+    ({ knownPeers, lastSentPing }) => ({ knownPeers, lastSentPing }),
   );
   const now = DateTime.now();
 
@@ -49,9 +49,12 @@ export function PingTable() {
                   now
                     .diff(DateTime.fromMillis(peer.last_seen))
                     .shiftTo("seconds").seconds
-                }s
+                }
+                s
                 <br />
-                <small>({DateTime.fromMillis(peer.last_seen).toFormat("tt")})</small>
+                <small>
+                  ({DateTime.fromMillis(peer.last_seen).toFormat("tt")})
+                </small>
               </td>
               <td style={{ textAlign: "end" }}>{peer.lastPing?.ping}</td>
             </tr>
